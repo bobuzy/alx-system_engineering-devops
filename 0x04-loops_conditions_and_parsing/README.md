@@ -1,13 +1,8 @@
 # 0x04-loops_conditions_and_parsing
 
-## Task: Manage Servers - RSA Key Pair
+## Task 0: Create a SSH RSA key pair
 
 ## Objective:
-You will soon have to manage your own servers concept page hosted on remote data centers. We need to set them up with your RSA public key so that you can access them via SSH.
+This task involves creating an SSH RSA key pair for accessing remote servers securely. The objective is to set up RSA public and private keys for SSH access to remote servers.
 
-## Requirements:
-1. Create an RSA key pair.
-2. Share your public key in your answer file `0-RSA_public_key.pub`.
-
-## Answer:
-- Filename: `0-RSA_public_key.pub`
+### Solution Code (`0-RSA_public_key.pub`)
