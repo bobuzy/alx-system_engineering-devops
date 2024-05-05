@@ -1,11 +1,14 @@
 # 0x04-loops_conditions_and_parsing
 
+
+
 ## Task 0: Create a SSH RSA key pair
 
 ### Objective:
 This task involves creating an SSH RSA key pair for accessing remote servers securely. The objective is to set up RSA public and private keys for SSH access to remote servers.
 
 ### Solution Code (`0-RSA_public_key.pub`)
+
 
 
 ## Task 1: For Best School loop
@@ -19,6 +22,7 @@ The provided Bash script utilizes a for loop to iterate 10 times, each time echo
 1. The `for` loop is initialized with the syntax `for (( i = 0; i < 10; i++ ))`, where `i` is the loop variable starting from 0 and incrementing by 1 in each iteration until it reaches 9 (10 iterations in total).
 2. Inside the loop, the `echo "Best School"` command is used to output the text "Best School" to the terminal.
 3. After the loop completes all iterations, the script ends, having displayed "Best School" 10 times in the terminal.
+
 
 
 ## Task 2: While Best School loop
@@ -36,6 +40,7 @@ The provided Bash script utilizes a while loop to display "Best School" 10 times
 5. After 10 iterations, the loop ends, having displayed "Best School" 10 times in the terminal.
 
 
+
 ## Task 3: Until Best School loop
 
 ### Objective:
@@ -49,6 +54,7 @@ The provided Bash script utilizes an until loop to display "Best School" 10 time
 3. Inside the loop, the `echo "Best School"` command is used to output the text "Best School" to the terminal.
 4. The loop increments the value of `x` using `(( x++ ))` with each iteration, eventually reaching 10 and ending the loop.
 5. After 10 iterations, the loop ends, having displayed "Best School" 10 times in the terminal.
+
 
 
 ## Task 4: If 9, say Hi!
@@ -67,6 +73,7 @@ The provided Bash script utilizes a while loop to display "Best School" 10 times
 6. After 10 iterations, the loop ends, having displayed "Best School" 10 times with "Hi" on a new line during the 9th iteration.
 
 
+
 ## Task 5: 4 bad luck, 8 is your chance
 
 ### Objective:
@@ -82,6 +89,7 @@ The provided Bash script utilizes a while loop to iterate from 1 to 10, displayi
 5. If neither of the above conditions is met, the `else` statement executes the `echo "Best School"` command to output "Best School".
 6. The loop increments the value of `x` using `(( x++ ))` with each iteration, eventually ending the loop after 10 iterations.
 7. After 10 iterations, the loop ends, having displayed "bad luck" for the 4th iteration, "good luck" for the 8th iteration, and "Best School" for the other iterations.
+
 
 
 ## Task 6: Superstitious numbers
@@ -108,6 +116,7 @@ The provided Bash script utilizes a while loop to iterate from 1 to 20, displayi
 6. After 20 iterations, the loop ends, having displayed numbers from 1 to 20 with specific messages for the 4th, 9th, and 17th iterations.
 
 
+
 ## Task 7: Clock
 
 ### Objective:
@@ -132,6 +141,7 @@ The provided Bash script utilizes nested while loops to display the time for 12 
 Note: In this example, only the first 70 lines of output are displayed using the `head` command.
 
 
+
 ## Task 8: For ls
 
 ### Objective:
@@ -154,6 +164,7 @@ The provided Bash script utilizes a for loop to list all contents in the current
 Note: Hidden files are excluded from the output as per the requirements.
 
 
+
 ## Task 9: To file, or not to file
 
 ### Objective:
@@ -170,6 +181,7 @@ The provided Bash script checks for the existence of the school file and prints 
 4. It then checks if the file is a regular file using `-f "school"`. If it is a regular file, it prints "school is a regular file".
 5. If the file does not exist, the script prints "school file does not exist".
 6. The script provides information about the school file based on its existence, emptiness, and regularity as per the requirements.
+
 
 
 ## Task 10: FizzBuzz
@@ -195,6 +207,7 @@ The provided Bash script utilizes a for loop to iterate from 1 to 100 and applie
 3. The loop continues until all numbers from 1 to 100 have been processed, printing "Fizz", "Buzz", "FizzBuzz", or the number as required by the FizzBuzz problem.
 
 Note: The output is displayed in a list format as per the requirements.
+
 
 
 ## How to Run the Code
