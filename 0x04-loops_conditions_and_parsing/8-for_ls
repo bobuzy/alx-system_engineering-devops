@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
-# Display all contents in the current directory
+# Display regular files in the current directory
 
-for file in *;
+FILE=$(ls)
+
+for file in $FILE;
 do
 	if [ -f "$file" ] && [[ "$file" != .* ]];
 	then
