@@ -146,22 +146,20 @@ Note: In this example, only the first 70 lines of output are displayed using the
 
 ### Objective:
 Write a Bash script that displays:
-- The content of the current directory.
+- All regular files of the current directory.
 - In a list format.
 - Where only the part of the name after the first dash is displayed (refer to the example).
 
-The objective is to practice using for loops in Bash scripting to list directory contents and manipulate file names.
+The objective is to practice using for loops in Bash scripting to list directory files(excluding sub_directories and hidden files) and manipulate file names.
 
 ### Solution Code (`8-for_ls`)
-The provided Bash script utilizes a for loop to list all contents in the current directory, displaying only the part of the name after the first dash. Here's how the code works:
+The provided Bash script utilizes a for loop to list all all regular files in the current directory, displaying only the part of the name after the first dash. Here's how the code works:
 
 1. The script uses a for loop to iterate through each file (`$file`) in the current directory.
 2. Inside the loop, an `if` statement checks if `$file` is a regular file (`-f "$file"`) and if it's not a hidden file (`[[ "$file" != .* ]]`). Hidden files start with a dot (`.`) in Unix-like systems.
 3. If the file meets the conditions, the script extracts the part of the name after the first dash (`-`) using the `cut` command and stores it in the variable `name`.
 4. The script then echoes (`echo "$name"`) the modified name, displaying it in a list format.
 5. The loop continues until all files in the directory have been processed, listing only the desired parts of the file names after the first dash.
-
-Note: Hidden files are excluded from the output as per the requirements.
 
 
 
