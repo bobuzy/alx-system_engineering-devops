@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Install and setup Nginx web server
+sudo apt-get update -qq
+sudo apt-get install nginx -y
+
+# Start the server if not already running
+sudo service nginx start
+
+# Allow HTTP traffic i.e listen on port 80
+sudo ufw allow 'Nginx HTTP'
+
+# Change the ownership of the website to current user and group.
+sudo chown -R "$USER":"$USER" /var/www/html
+
+# Make all users be able to read and execute the website files, but only owner can write
+sudo chmod -R 755 /var/www
+
+# Set the default request to return "Hello World!"
+echo "Hello World!" | dd status=none of=/var/www/html/index.html
+
+# Restart Nginx
+sudo service nginx restart
