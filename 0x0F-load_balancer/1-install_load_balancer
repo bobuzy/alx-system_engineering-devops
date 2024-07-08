@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+# Install HAProxy for load balancing
+
+# Update package list and install HAProxy
+sudo apt update
+sudo apt install -y haproxy
+
+# Backup default HAProxy configuration file
+sudo cp /etc/haproxy/haproxy.cfg haproxy_default.backup
+
+# Define the HAProxy configuration
+server_config=\
+"
+defaults
+  mode http
+  timeout client 15s
+  timeout connect 10s
+  timeout server 15s
+  timeout http-request 10s
+
+frontend clickviral-tech-frontend
+    bind *:80
+    default_backend clickviral-tech-backend
+
+backend clickviral-tech-backend
+    balance roundrobin
+    server 490863-web-01 54.237.36.103:80 check
+    server 490863-web-02 100.24.74.195:80 check
+"
+
+# Disable shellcheck warning SC2154 for inline script variable
+# shellcheck disable=SC2154
+echo "$server_config" | sudo tee /etc/haproxy/haproxy.cfg > /dev/null
+
+# Enable HAProxy to start by init script
+echo "ENABLED=1" | sudo tee /etc/default/haproxy > /dev/null
+
+# Inform user about configuration completion
+echo "Configured round-robin load balancing for web-01 and web-02."
+
+# Restart HAProxy service
+sudo service haproxy restart
+echo "Successfully configured HAProxy for round-robin load balancing between web-01 and web-02."
