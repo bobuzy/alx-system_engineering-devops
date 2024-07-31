@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Returns to-do list information for a given employee ID."""
+"""Create csv file from information of a given employee ID."""
 import csv
 import requests
 import sys
