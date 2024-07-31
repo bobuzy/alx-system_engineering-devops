@@ -15,7 +15,6 @@ if __name__ == "__main__":
     csv_file = "{}.csv".format(emp_id)
 
     with open(csv_file, mode='w', newline='') as csvfile:
-        writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
         for task in task_dict:
-            writer.writerow([emp_id, user_name,
-                    task.get("completed"), task.get("title")])
+            csvfile.write('"{}","{}","{}","{}"\n'.format(
+                emp_id, user_name, task.get("completed"), task.get("title")))
