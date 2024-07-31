@@ -9,16 +9,16 @@ if __name__ == "__main__":
     emp_id = str(int(sys.argv[1]))
     user = requests.get(url + "users/" + emp_id).json()
     user_name = user.get("name")
-    task_dict = requests.get(url + "todos", params={"userId":emp_id}).json()
+    task_dict = requests.get(url + "todos", params={"userId": emp_id}).json()
     tasks = len(task_dict)
-    
+
     done_tasks = 0
     for task in task_dict:
-        if task.get("completed") == True:
+        if task.get("completed"):
             done_tasks += 1
 
     print("Employee {} is done with tasks({}/{}):".format(
             user_name, done_tasks, tasks))
     for task in task_dict:
-        if task.get("completed") == True:
+        if task.get("completed"):
             print("\t ", task.get("title"))
