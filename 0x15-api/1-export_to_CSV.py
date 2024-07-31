@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     csv_file = "{}.csv".format(emp_id)
     fieldnames = ["USER_ID", "USERNAME", "TASK_COMPLETED_STATUS",
-                    "TASK_TITLE"]
+                  "TASK_TITLE"]
 
     with open(csv_file, mode='w', newline='') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames,
